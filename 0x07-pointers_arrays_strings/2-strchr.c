@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdlib.h>
 /**
  *_strch - returns first occurence of character c in a string s.
  *@s: the string to check.
