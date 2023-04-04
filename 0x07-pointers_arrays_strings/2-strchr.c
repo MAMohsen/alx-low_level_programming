@@ -3,22 +3,18 @@
 /**
  *_strch - returns first occurence of character c in a string s.
  *@s: the string to check.
- *#c: the character to look for
+ *@c: the character to look for
  *Return: the pointer to the location of the first occurence of the character c in string s.
  *Return: NULL if character is not found.
  */
-
 char *_strchr(char *s, char c)
 {
-	while (*s)
-	{
-		if (*s != c)
-			s++;
-		else
-			return (s);
-	}
-	if (c == '\0')
-		return (s);
+	unsigned int i = 0;
 
-	return (NULL);
+	for (; *(s + i) != '\0'; i++)
+		if (*(s + i) == c)
+			return (s + i);
+	if (*(s + i) == c)
+		return (s + i);
+	return ('\0');
 }
